@@ -25,7 +25,7 @@ class DataModule {
     fun provideCache(@ApplicationQualifier context: Context) = Cache(context.cacheDir, 10 * 1024 * 1024.toLong())
 
     @Provides @Singleton @ApiKey
-    fun provideApiKey(@ApplicationQualifier context: Context): String = context.getString(R.string.last_fm_api_key)
+    fun provideApiKey(@ApplicationQualifier context: Context): String = "96d047d302a8707f3a7410873466dbfd"
 
     @Provides @Singleton @CacheDuration
     fun provideCacheDuration(@ApplicationQualifier context: Context) = context.resources.getInteger(R.integer.cache_duration)
